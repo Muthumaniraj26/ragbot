@@ -1,0 +1,60 @@
+To run this product seamlessly on a brand new computer without errors, you need a matching Python runtime environment and a set of open-source frameworks.
+
+Here is the complete breakdown of the environment, tools, frameworks, and setup commands you need.
+
+🏗️ Frameworks and Tools Used
+Your application relies on a modern, decoupled architecture split into three main layers:
+
+1. Core Application Frameworks
+FastAPI: A high-performance, asynchronous web framework used to build your production-grade Backend API endpoints.
+
+Uvicorn: A lightning-fast ASGI server implementation used to run and host your FastAPI backend application code.
+
+Streamlit: A powerful frontend framework designed to turn data scripts into clean, interactive web interfaces entirely in Python.
+
+2. Artificial Intelligence and Retrieval-Augmented Generation (RAG)
+Ollama: A local model orchestration tool that allows you to host and run large language models and embedding pipelines completely offline on your own machine.
+
+LangChain Communities (langchain-community, langchain-ollama): A modular framework used to manage vector indexing, load embedding models, and pass data context to chat systems.
+
+FAISS (Facebook AI Similarity Search): An ultra-fast, lightweight vector library used to store textual data representations as multidimensional math vectors on your hard drive to enable semantic matching.
+
+BeautifulSoup (bs4): A web-scraping package utilized by the app as an automated backup engine to query and extract public directory listings when internal database records are clean out of hits.
+
+3. Database and Security Utilities
+SQLite3: A lightweight, self-contained SQL database engine bundled directly with Python, used to house relational structures for workers, customer lists, and transaction review scores.
+
+Bcrypt: A secure hashing library used to turn raw string passwords into complex, irreversible cryptographic strings before committing them to the database.
+
+PyJWT: A security convention used to issue JSON Web Tokens (JWT) upon successful worker authentication, locking down profile modification routes against unauthorized manipulation.
+
+🛠️ Step 1: System Prerequisites for a New PC
+Before running any Python packages, a new computer must have these two foundational tools installed:
+
+Python (Version 3.10 or 3.11 recommended): Make sure to check the box that says "Add Python to PATH" during the installation process.
+
+Ollama: Download and install it from the official website. Once installed, open your command terminal and pull down your required models:
+
+Bash
+ollama pull nomic-embed-text
+ollama pull llama3
+📦 Step 2: The Unified Pip Installation Command
+Open your command prompt or terminal on the new computer, navigate to your project directory, and execute this complete installation string to install all framework layers at once:
+
+Bash
+pip install fastapi uvicorn streamlit langchain-community langchain-ollama faiss-cpu beautifulsoup4 bcrypt pyjwt python-dotenv
+⚙️ Step 3: Verifying the Run Sequence
+To guarantee execution on the new device without path errors, execute your architecture in this exact sequence:
+
+Create a .env file containing your cryptographic signature:
+
+Plaintext
+SECRET_KEY=put_any_long_random_string_here
+Launch your background API layer:
+
+Bash
+uvicorn backend:app --reload --host 127.0.0.1 --port 8000
+Open a second terminal window pane and launch your user interface portal:
+
+Bash
+streamlit run frontend.py
